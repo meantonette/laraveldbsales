@@ -18,12 +18,21 @@
       
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-circle"></i> User Management <span class="caret"></span></a>
           <ul class="dropdown-menu">
-                   
-                      <li><a href="{{ route('user.signup') }}">Signup</a></li>
+            {{-- <ul class="dropdown-menu"> --}}
+              @if (Auth::check())
+                <li><a href="{{ route('user.profile') }}">User Profile</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="{{ route('user.logout') }}">Logout</a></li>
+              @else
+                <li><a href="{{ route('user.signup') }}">Signup</a></li>
+                <li><a href="{{ route('user.signin') }}">Signin</a></li>
+              @endif
+
+                      {{-- <li><a href="{{ route('user.signup') }}">Signup</a></li>
                       <li><a href="{{ route('user.signin') }}">Signin</a></li>
                       <li role="separator" class="divider"></li>
                       {{-- <li><a href="#"></a>Logout</li> --}}
-                      <li><a href="{{ route('user.logout') }}">Logout</a></li>
+                       {{--<li><a href="{{ route('user.logout') }}">Logout</a></li> --}}
 
             {{-- <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-circle"></i> User Account <span class="caret"></span></a>

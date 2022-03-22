@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\item;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth; 
 
 class ItemController extends Controller
 {
@@ -12,12 +13,24 @@ class ItemController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+    // mali tooo
+    //public function __construct()
+    // {
+    //     if(!Auth::check()){
+    //         return redirect()->route('user.signin'); 
+    //     }
+    // }
+
     public function Index()
     {
         // return view('shop.index');
+        if(Auth::check()){
             $items = Item::all();
             return view('shop.index', compact('items'));
         }
+        return redirect()->route('user.signin'); 
+    }
     
     /**
      * Show the form for creating a new resource.
