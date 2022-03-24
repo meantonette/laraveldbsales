@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\item;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ItemController extends Controller
 {
@@ -14,9 +15,12 @@ class ItemController extends Controller
      */
     public function Index()
     {
-        // return view('shop.index');
+        if (Auth::check()){
             $items = Item::all();
-            return view('shop.index', compact('items'));
+        return view('shop.index', compact('items'));
+           
+        }
+        return redirect()->route('user.signin');
         }
     
     /**

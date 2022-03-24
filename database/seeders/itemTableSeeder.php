@@ -15,61 +15,29 @@ class itemTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $item = new Item([
 
-        $item = new item([
-            'img' => 'https://hpmedia.bloomsbury.com/rep/s/9781408855911_309576.jpeg',
+            'img_Path' => 'https://i.insider.com/5c799c56eb3ce834ad57b632?width=750&format=jpeg&auto=webp',
+            
             'title' => 'Harry Potter',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum, quod.',
+            
+            'description' => 'Lorem ipsum dolor sit amet,
+            consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud
+            exercitation ullamco laboris nisi ut aliquip ex ea
+            commodo consequat. ',
+            
             'cost_price' => 10,
-            'sell_price' => 15
-        ]);
-        $item->save();
+            
+            'sell_price' => 15,
 
-        $item = new item([
-            'img' => 'https://hpmedia.bloomsbury.com/.../9781408855911_309576.jpeg',
-            'title' => 'Harry Potter',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ',
-            'cost_price' => 10,
-            'sell_price' => 15
+            'discontinued' => 1,
+            
+            'category_id' => 1,
+            
         ]);
-        $item->save();
-
-        $item = new item([
-            'img' => 'https://hpmedia.bloomsbury.com/.../9781408855911_309576.jpeg',
-            'title' => 'Harry Potter',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ',
-            'cost_price' => 10,
-            'sell_price' => 15
-        ]);
-        $item->save();
-
-        $item = new item([
-            'img' => 'https://hpmedia.bloomsbury.com/.../9781408855911_309576.jpeg',
-            'title' => 'Harry Potter',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ',
-            'cost_price' => 10,
-            'sell_price' => 15
-        ]);
-        $item->save();
-
-        $item = new item([
-            'img' => 'https://hpmedia.bloomsbury.com/.../9781408855911_309576.jpeg',
-            'title' => 'Harry Potter',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ',
-            'cost_price' => 10,
-            'sell_price' => 15
-        ]);
-        $item->save();
-
-        $item = new item([
-            'img' => 'https://hpmedia.bloomsbury.com/.../9781408855911_309576.jpeg',
-            'title' => 'Harry Potter',
-            'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ',
-            'cost_price' => 10,
-            'sell_price' => 15
-        ]);
-        $item->save();
+            $item->save();
     }
 
 }
