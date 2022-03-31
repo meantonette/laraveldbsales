@@ -13,7 +13,6 @@ class item extends Model
     public $table = 'item';
     public $timestamps = false;
 
-    protected $fillable = ['description','cost_price', 'sell_price','img', 'title'
- ];
-
+    protected $fillable = ['description','sell_price','cost_price','imagePath','title'
+    ];
 }
